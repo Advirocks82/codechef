@@ -1,0 +1,21 @@
+// User function Template for Java
+
+class Solution {
+    int MissingNumber(int array[], int n) {
+        // Using sum approach to find the missing number
+
+        // Variable to store the sum of elements in the array
+        int sum = 0;
+
+        // Calculate the sum of the first 'n' natural numbers
+        int totalsum = n * (n + 1) / 2;
+
+        // Iterate through the array to calculate the sum of its elements
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+
+        // The missing number is the difference between the expected sum (totalsum) and the actual sum (sum)
+        return totalsum - sum;
+    }
+}
